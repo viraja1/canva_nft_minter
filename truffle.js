@@ -9,6 +9,7 @@ let privateKey = process.env.PRIVATE_KEY;
 
 // Websocket urls
 let ropsten = process.env.ROPSTEN;
+let matic_mumbai = process.env.MATIC_MUMBAI;
 
 module.exports = {
     contracts_build_directory: "./output",
@@ -22,6 +23,12 @@ module.exports = {
             provider: () => new HDWalletProvider(privateKey, ropsten),
             network_id: "3"
 
+        },
+        matic_mumbai: {
+            provider: () => new HDWalletProvider(privateKey, matic_mumbai),
+            network_id: "80001",
+            networkCheckTimeout: 1000000,
+            timeoutBlocks: 200
         },
     },
     compilers: {

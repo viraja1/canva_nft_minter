@@ -19,11 +19,17 @@ let networkNameMapping = {
         "contractAddress": "0x33CFF3EAd2cBE63c6462F1cE6554f30D0AfEB8fE",
         "displayName": "ropsten",
         "ensAddress": "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
-    }
+    },
+    "Mumbai Matic-Testnet": {
+        "host": "mumbai",
+        "chainId": "80001",
+        "contractAddress": "0x4EC59aC3f5f630DA8394A01be966c4a9ce4e54d9",
+        "displayName": "matic mumbai"
+    },
 };
 const defaultNetwork = "ropsten";
-let allowedNetworks = ['3'];
-const unsupportedNetworkCopy = 'App works only for Ropsten';
+let allowedNetworks = ['3', '80001'];
+const unsupportedNetworkCopy = 'App works only for Ropsten or Matic Mumbai Testnet';
 
 const reverseLookupMapping = {
     "google": "google",
@@ -206,6 +212,11 @@ class App extends React.Component {
         } else if (this.state.otherAccountType === 'ens') {
             let hash = namehash.hash(this.state.otherAccount);
             let ensAddress = networkNameMapping[this.state.selectedNetwork]["ensAddress"];
+            if(!ensAddress){
+                alert('ENS is not supported for this network');
+                this.setState({loadingMint: false});
+                return
+            }
             let ENSContract = new this.state.web3.eth.Contract(ENS, ensAddress);
             let resolver = await ENSContract.methods.resolver(hash).call();
             let ENSResolverContract = new this.state.web3.eth.Contract(ENSResolver, resolver);

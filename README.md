@@ -20,7 +20,7 @@ where they can mint the ERC 721 NFT and send it to an address. It also has suppo
 recipient address.
 
 ### App Link
-Canva NFT Minter (Ropsten) - https://canva-nft-minter.netlify.app/
+Canva NFT Minter (Ropsten or Matic Mumbai) - https://canva-nft-minter.netlify.app/
 
 ### Screenshots
 ![](screenshots/canva_nft_minter_1.png)
@@ -72,6 +72,7 @@ Canva NFT Minter (Ropsten) - https://canva-nft-minter.netlify.app/
    ```
    PRIVATE_KEY=
    ROPSTEN=
+   MATIC_MUMBAI=wss://ws-matic-mumbai.chainstacklabs.com
    ```
    
    Replace private key with your account private key for the contract deployment.
@@ -81,6 +82,7 @@ Canva NFT Minter (Ropsten) - https://canva-nft-minter.netlify.app/
 5) Send test ETH to the account associated with the private key which will be used for the contract deployment.
     
     Ropsten faucet - https://faucet.ropsten.be/
+    Matic Mumbai faucet - https://faucet.matic.network/
     
 6) Deploy the contract to the selected networks using infura
 
@@ -90,7 +92,7 @@ Canva NFT Minter (Ropsten) - https://canva-nft-minter.netlify.app/
    ```
    
    Run the above commands separately for each network where the contract needs to be deployed by replacing {network} 
-   with `ropsten`.
+   with `ropsten` or `matic_mumbai`.
    
    Note down the `contract address` for `NFTMinter` for each network where the contract was deployed.
    

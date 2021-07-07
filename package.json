@@ -5,7 +5,7 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.1.0",
     "@toruslabs/torus-embed": "^1.10.10",
-    "@truffle/hdwallet-provider": "^1.2.3",
+    "@truffle/hdwallet-provider": "^1.4.1",
     "bootstrap": "^4.3.1",
     "eth-ens-namehash": "^2.0.8",
     "query-string": "^7.0.0",
