@@ -82,6 +82,7 @@ Canva NFT Minter (Ropsten or Matic Mumbai) - https://canva-nft-minter.netlify.ap
 5) Send test ETH to the account associated with the private key which will be used for the contract deployment.
     
     Ropsten faucet - https://faucet.ropsten.be/
+    
     Matic Mumbai faucet - https://faucet.matic.network/
     
 6) Deploy the contract to the selected networks using infura
