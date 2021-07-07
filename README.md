@@ -96,7 +96,7 @@ Canva NFT Minter (Ropsten or Matic Mumbai) - https://canva-nft-minter.netlify.ap
    
    Note down the `contract address` for `NFTMinter` for each network where the contract was deployed.
    
-7) Update the contract address for each network where the contract was deployed in src/App.js:12
+7) Update the contract address for each network where the contract was deployed in src/App.js:15
 
    Also verify chainId and host for each network in src/App.js:15
    
