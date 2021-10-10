@@ -12,6 +12,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "jimp": "^0.16.1",
-    "nft.storage": "^1.4.0"
+    "nft.storage": "^3.3.0"
   }
 }
